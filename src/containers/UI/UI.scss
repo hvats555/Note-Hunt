@@ -1,0 +1,82 @@
+:root {
+    --color-primary: #eb2f64;
+    --color-primary-light: #ff3366;
+    --color-primary-dark: #ba265d;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2);
+
+    --color-success: #1a832b;
+    --color-failure: #cf1f1f;
+
+    --color-change-scale: #117ada;
+    --color-change-scale-dark: #0e5ca5;
+    --color-new-game: #f9a400;
+    --color-new-game-dark: #bb7e05;
+}
+
+$bp-largest: 800px;
+$bp-large: 600px;
+$bp-medium: 480px;
+$bp-small: 380px;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*::after, *::before{
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 rem = 10px*/
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.8rem;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+    @media only screen and (max-width: $bp-largest) {
+
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        background-image: unset;
+    }
+}
+
+.game__container {
+    border-radius: 1rem;
+    margin: 2rem auto;
+    background-color: #fff;
+    max-width: 80rem;
+    min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        max-width: 60rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        margin: unset;
+        height: 100vh;
+        max-width: 100%;
+        min-width: 100%;
+    }
+}

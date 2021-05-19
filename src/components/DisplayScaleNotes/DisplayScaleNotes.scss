@@ -1,0 +1,21 @@
+
+.selectedScaleNotes {
+    margin-top: 1rem;
+    text-align: center;
+    &__heading {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__list-item {
+        flex: 1 0 11%;
+        font-size: 2rem;
+    }
+}

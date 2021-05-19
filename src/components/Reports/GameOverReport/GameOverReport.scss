@@ -1,0 +1,96 @@
+@import '../../../containers/UI/UI.scss';
+
+.gameOverReport {
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    &__message {
+        color: var(--color-primary);
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__emoji {
+        width: 8rem;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+
+        animation-name: pulsate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    
+        transition: all 1s;
+    }
+
+    &__game-stats, &__correct-note {
+        display: flex;
+        justify-content: space-between;
+    
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__btn{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__btn-play-again, &__btn-change-scale {
+        margin: .4rem 0;
+        font-size: 1.5rem;
+        padding: 1rem 1rem;
+        border: none;
+        color: #fff;
+        background-color: var(--color-grey-dark-1);
+        border-radius: .9rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__btn-play-again {
+        background-color: var(--color-new-game);
+
+        animation-name: pulsate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    
+        transition: all 1s;
+
+        &:hover {
+            background-color: var(--color-new-game-dark);
+        }
+
+    }
+
+    &__btn-change-scale {
+        width: 100%;
+        background-color: var(--color-change-scale);
+
+        animation-name: pulsate;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    
+        transition: all 1s;
+
+        &:hover {
+            background-color: var(--color-change-scale-dark);
+        }
+    }
+}
+

@@ -1,0 +1,49 @@
+@import '../../containers/UI/UI.scss';
+/* GAME CONTROLS SECTION */
+
+.game__controls {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game__controls-btn {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    padding: 2.5rem;
+    border: none;
+    color: #fff;
+    background-color: var(--color-grey-dark-1);
+    border-radius: 1rem;
+
+    box-shadow: .5px .5px 5px 0px rgba(0,0,0,0.75);
+    transition: all 1s;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        padding: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+.game__controls-btn:hover {
+    transform: scale(1.01) translateY(-1rem);
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+}
+
+.game__controls-btn:active {
+    transform: scale(1) translateY(-0.5rem);
+    box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+}
+
+.game__controls-btn-success {
+    background-color: var(--color-success);
+}
+
+.game__controls-btn-failure {
+    background-color: var(--color-failure);
+}

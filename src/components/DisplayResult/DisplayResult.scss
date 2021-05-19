@@ -1,0 +1,14 @@
+/* GAME FEEDBACK SECTION */
+
+.feedback {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.feedback__success {
+    color: var(--color-success);
+}
+
+.feedback__failure {
+    color: var(--color-failure);
+}

@@ -1,0 +1,40 @@
+/* GAME CONTROLS SECTION */
+
+.scaleSelector {
+    margin: 1rem auto;
+
+    &__controls {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        flex: 1 0 14%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        font-size: 2rem;
+        padding: 2rem;
+        border: none;
+        color: #fff;
+        background-color: var(--color-grey-dark-1);
+        border-radius: 1rem;
+    
+        box-shadow: .5px .5px 5px 0px rgba(0,0,0,0.75);
+        transition: all 1s;
+
+        &:hover {
+            transform: scale(1.01) translateY(-1rem);
+            box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+        }
+
+        &:active{
+            transform: scale(1) translateY(-0.5rem);
+            box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+
+.scaleSelector__btn-selected {
+    background-color: var(--color-change-scale);
+}

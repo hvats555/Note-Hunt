@@ -1,0 +1,139 @@
+/* NOTE PLAYER SECTION */
+
+@import '../../containers/UI/UI.scss';
+
+.note__player {
+    margin-top: 5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+
+    &-main {
+        margin-right: 10rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: unset;
+        }
+
+        &-btn {
+            padding: 1rem;
+            box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 30rem;
+            width: 30rem;
+            border-radius: 50%;
+            background-color: var(--color-primary-light);
+        
+        
+            animation-name: pulsate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        
+            transition: all 0.5s;
+        
+            @media only screen and (max-width: $bp-largest) {
+                height: 20rem;
+                width: 20rem;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                height: 15rem;
+                width: 15rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                height: 20rem;
+                width: 20rem;
+            }
+
+            &:hover {
+                box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.75);
+                background-color: var(--color-primary);
+            }
+            
+            &:active {
+                background-color: var(--color-primary-dark);
+            }
+
+            & > .material-icons {
+                font-size: 20rem;
+                color: #fff;
+            
+                @media only screen and (max-width: $bp-largest) {
+                    font-size: 10rem;
+                }
+
+            }            
+        }
+    }
+
+    &-root-btn {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        background-color: var(--color-grey-dark-2);
+        box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.75);
+    
+        animation-name: pulsate;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    
+        transition: all 1s;
+    
+        @media only screen and (max-width: $bp-largest) {
+            height: 10rem;
+            width: 10rem;
+        }
+
+        
+        @media only screen and (max-width: $bp-small) {
+            height: 15rem;
+            width: 15rem;
+        }
+    
+        &:hover {
+            background-color: var(--color-grey-dark-1);
+        }
+    
+        & > .material-icons {
+            font-size: 10rem;
+            color: #fff;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 5rem;
+            }
+        }
+    }
+
+    &-label {
+        margin-top: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

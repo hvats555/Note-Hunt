@@ -1,0 +1,100 @@
+@import '../UI/UI.scss';
+
+.welcome {
+    padding: 2rem;
+    width: 90%;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-large) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__heading{
+        text-align: center;
+        font-weight: 400;
+
+        @media only screen and (max-width: $bp-largest) {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    }
+
+    &__subheading {
+        text-align: center;
+    }
+
+    &__cover {
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-large) {
+            margin-top: 10rem;
+        }
+    }
+
+    &__cover-image {
+        width: 70%;
+        height: auto;
+
+        @media only screen and (max-width: $bp-large) {
+            width: 100%;
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+
+
+        @media only screen and (max-width: $bp-large) {
+        }
+    }
+
+    &__play-btn, &__how-to-play-btn {
+        width: 100%;
+        font-size: 2rem;
+        padding: 2rem;
+        border: none;
+        color: hsl(0, 0%, 100%);
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+
+    
+        box-shadow: .5px .5px 5px 0px rgba(0,0,0,0.75);
+        transition: all 1s;
+
+
+    }
+
+    &__play-btn {
+        background-color: var(--color-primary);
+
+        &:hover {
+            transform: scale(1.01) translateY(-1rem);
+            box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+        }
+    
+        &:active{
+            transform: scale(1) translateY(-0.5rem);
+            box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+        }
+    }
+
+    &__how-to-play-btn {
+        background-color: var(--color-new-game);
+
+        &:hover {
+            transform: scale(1.01) translateY(-1rem);
+            box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.75);
+        }
+    
+        &:active{
+            transform: scale(1) translateY(-0.5rem);
+            box-shadow: 2px 2px 12px 0px rgba(0,0,0,0.75);
+        }
+        
+    }
+}
